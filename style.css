@@ -1,0 +1,275 @@
+body {
+    min-height: 100vh;
+    background: black;
+}
+
+nav {
+    z-index: 999;
+    position: fixed;
+    top: 1rem;
+    right: 50%;
+    transform: translateX(50%);
+
+    width: 80%;
+    max-width: 1200px;
+    padding: 1rem 2rem;
+    border-radius: var(--pill-shape);
+}
+
+nav > .logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    color: white;
+}
+
+section {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.live-bg {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    /* brightness control */
+    opacity: 40%;
+}
+
+.live-bg > video {
+    height: 100%;
+}
+
+#hero {
+    padding-bottom: 15px;
+}
+
+.text-container {
+    width: 95%;
+    max-width: 1000px;
+    font-size: 4rem;
+    margin-top: -120px;
+}
+
+#hero h1 {
+    font-weight: 900;
+    letter-spacing: px;
+    /* background: radial-gradient(circle at bottom left, royalblue, #8888e6, navy);
+    background-clip: text;
+    color: transparent; */
+    line-height: 1em;
+    animation: levitate 4s ease-in-out infinite;
+}
+
+@keyframes levitate {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.name {
+    font-family: "Momo Signature", sans-serif;
+    background: radial-gradient(circle at left bottom, orangered, orange);
+    background-clip: text;
+    color: transparent;
+}
+
+a.button {
+    margin-top: 50px;
+    padding: 6px;
+    width: 25%;
+    min-width: 400px;
+    border-radius: var(--pill-shape);
+    transition: transform 300ms ease;
+    animation: wave 3s linear infinite;
+}
+
+@keyframes wave {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.25);
+    }
+
+    100% {
+        box-shadow: 0 0 0 12px rgba(255, 255, 255, 0);
+    }
+}
+
+a.button:hover {
+    transform: scale(1.05);
+    animation: none;
+}
+
+a.button:active {
+    transform: scale(1);
+}
+
+.button p {
+    flex-grow: 1;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.button span {
+    min-width: 120px;
+    padding: 0.75em;
+    border-radius: var(--pill-shape);
+    background: transparent;
+    backdrop-filter: none;
+}
+
+#chatbot {
+    min-height: 100vh;
+    padding: 100px 1rem;
+    background: url("assets/bg-img.jpg");
+    background-size: 100%;
+    object-fit: cover;
+    background-position: center;
+}
+
+.cards {
+    width: max-content;
+    max-width: 1400px;
+    gap: 40px;
+}
+
+.divider {
+    height: 75vh;
+    border-right: 1px dashed rgba(255, 255, 255, 0.5);
+}
+
+.card {
+    width: 100%;
+    max-width: 600px;
+    min-width: 320px;
+    overflow: hidden;
+    border-radius: 24px;
+}
+
+#card-1 {
+    background: url("assets/motion.gif");
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+#card-2 {
+    background: url("assets/motion2.gif");
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.card-top {
+    position: relative;
+    background-color: white;
+    aspect-ratio: 3/2;
+    background: url();
+    background-size: 100%;  
+    object-fit: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.model-name {
+    font-size: 1rem;
+    padding: 4px 8px;
+    border-radius: var(--pill-shape);
+    user-select: none;
+
+    position: absolute;
+    top: 30%;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.card-bottom {
+    padding: 2.5rem 2rem;
+    backdrop-filter: blur(1rem);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+#card-1 .card-bottom {
+    background-color: rgba(21, 54, 85, 0.75);
+}
+
+#card-2 .card-bottom {
+    background-color: rgba(53, 18, 47, 0.75);
+}
+
+.text-area {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.text-area h2 {
+    margin-bottom: 0.25em;
+    font-size: 2em;
+}
+
+.recomended {
+    font-size: 1rem;
+    padding: 4px 8px;
+    border-radius: var(--pill-shape);
+    user-select: none;
+}
+
+.buttons {
+    padding: 1.5rem 0 0.5rem;
+}
+
+.card-bottom button {
+    flex-grow: 1;
+    color: inherit;
+    font-family: inherit;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    font-weight: 600;
+    padding-block: 16px;
+    border-radius: var(--pill-shape);
+    border: none;
+    background: rgba(0, 0, 0, 0.5);
+    min-width: 120px;
+    transition: flex 500ms ease, background 500ms ease;
+}
+
+button:disabled {
+    color: gray;
+    /* flex: 0; */
+}
+
+.card-bottom button:hover {
+    flex-grow: 2;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.card-bottom button:active {
+    background: black;
+}
+
+/* small animation tweak */
+.text-container,    
+.card {
+    animation: popUp 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes popUp {
+  0% {
+    opacity: 0.5;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

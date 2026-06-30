@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helium AI</title>
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <nav class="glass flex justify-between align-center">
+        <a href="#hero" class="logo name">Helium</a>
+
+        <div class="flex gap-2">
+            <a href="#hero">Home</a>
+            <a href="https://tinyurl.com/46rnhn9z" target="_blank">Insipiration</a>
+            <a href="https://tinyurl.com/3c6yjbbs" target="_blank">Developer</a>
+        </div>
+    </nav>
+
+    <section id="hero" class="flex-center flex-column">
+        <div class="text-container flex-center">
+            <h1 class="text-center">Hello there, I am Your Virtual Teaching Assistant <span class="name">Helium</span>
+            </h1>
+        </div>
+
+        <a href="#chatbot" class="button glass flex justify-between align-center">
+            <p class="text-center">Click here to try Helium AI</p>
+            <span class="glass flex-center">⫸</span>
+        </a>
+
+        <div class="live-bg flex-center">
+            <video src="assets/bg-vid2.webm" autoplay muted loop id="video"></video>
+        </div>
+    </section>
+
+    <section id="chatbot" class="flex-center">
+        <div class="cards flex-center">
+            <div class="card flex flex-column" id="card-1">
+                <div class="card-top">
+                    <div class="model-name glass flex-center">Helium v2.4</div>
+                </div>
+
+                <div class="card-bottom flex flex-column">
+                    <div class="text-area">
+                        <h2>For Advance Math</h2>
+                        <p class="text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga
+                            consectetur debitis earum facere dolores recusandae voluptate at eos!</p>
+                    </div>
+                    <div class="buttons flex gap-1">
+                        <input type="file" class="file-input" accept="image/*" hidden>
+                        <button class="upload">Upload an Image</button>
+                        <button class="send" disabled>Get Answer</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="card flex flex-column" id="card-2">
+                <div class="card-top">
+                    <div class="model-name glass flex-center">Helium v2.6</div>
+                </div>
+
+                <div class="card-bottom flex flex-column">
+                    <div class="text-area">
+                        <h2>Best for Everyday Tasks</h2>
+                        <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+                            corporis fugit illo quos, cum velit itaque, repellendus accusantium fugiat consequatur esse
+                            sunt?</p>
+                    </div>
+                    <div class="buttons flex gap-1">
+                        <input type="file" class="file-input" accept="image/*" hidden>
+                        <button class="upload">Upload an Image</button>
+                        <button class="send" disabled>Get Answer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
